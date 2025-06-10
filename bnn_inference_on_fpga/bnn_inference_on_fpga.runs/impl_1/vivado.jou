@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Jun 10 14:01:29 2025
+# Process ID: 6896
+# Current directory: C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.runs/impl_1
+# Command line: vivado.exe -log bnn_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bnn_top.tcl -notrace
+# Log file: C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.runs/impl_1/bnn_top.vdi
+# Journal file: C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.runs/impl_1\vivado.jou
+# Running On        :EMIRDEVLETED0A3
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :Apple Silicon
+# CPU Frequency     :3199 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :6436 MB
+# Swap memory       :9663 MB
+# Total Virtual     :16099 MB
+# Available Virtual :11397 MB
+#-----------------------------------------------------------
+source bnn_top.tcl -notrace

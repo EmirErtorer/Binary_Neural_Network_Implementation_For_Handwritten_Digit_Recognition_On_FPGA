@@ -1,0 +1,156 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Jun 10 14:04:40 2025
+| Host         : EMIRDEVLETED0A3 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bnn_top_control_sets_placed.rpt
+| Design       : bnn_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    78 |
+|    Minimum number of control sets                        |    78 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   424 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    78 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |    64 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |           11377 |         3336 |
+| No           | No                    | Yes                    |              29 |           14 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1826 |          798 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  Clock Signal  |                                      Enable Signal                                     | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | inference/compare_idx[3]_i_1_n_0                                                       | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | inference/addr3[5]_i_1_n_0                                                             | reset_IBUF       |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | inference/predicted_digit[3]_i_1_n_0                                                   | reset_IBUF       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[10].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[10].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[12].dense_layer1_weights/E[0]                          | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[12].dense_layer1_weights/process_neuron3_reg_rep__2[0] | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[12].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[0].dense_layer1_weights/E[0]                           | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[0].dense_layer1_weights/state_reg[0]_rep[0]            | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[38].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[2].dense_layer1_weights/state_reg[2][0]                | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[30].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[32].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[32].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[34].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[34].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[36].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[36].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[38].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[40].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[40].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[42].dense_layer1_weights/E[0]                          | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[42].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[44].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[44].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[46].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[46].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[14].dense_layer1_weights/E[0]                          | reset_IBUF       |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[14].dense_layer1_weights/state_reg[2]_1[0]             | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[14].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[14].dense_layer1_weights/state_reg[2]_0[0]             | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[48].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[48].dense_layer1_weights/E[0]                          | reset_IBUF       |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[4].dense_layer1_weights/E[0]                           | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[4].dense_layer1_weights/state_reg[2][0]                | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[52].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[50].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[50].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[54].dense_layer1_weights/E[0]                          | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[54].dense_layer1_weights/process_neuron2_reg_0[0]      | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[54].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[56].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[56].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[58].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[58].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[60].dense_layer1_weights/E[0]                          | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[60].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[62].dense_layer1_weights/E[0]                          | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[62].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[62].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[6].dense_layer1_weights/E[0]                           | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[6].dense_layer1_weights/state_reg[2][0]                | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[16].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[8].dense_layer1_weights/E[0]                           | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[18].dense_layer1_weights/E[0]                          | reset_IBUF       |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[18].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[20].dense_layer1_weights/E[0]                          | reset_IBUF       |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[22].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[22].dense_layer1_weights/state_reg[2][0]               | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[20].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[24].dense_layer1_weights/E[0]                          | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[26].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[26].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[28].dense_layer1_weights/E[0]                          | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[22].dense_layer1_weights/process_neuron2_reg[0]        | reset_IBUF       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | inference/layer1_parallel_block[2].dense_layer1_weights/E[0]                           | reset_IBUF       |                2 |             10 |         5.00 |
+|  clk_IBUF_BUFG | inference/temp_max[9]_i_1_n_0                                                          | reset_IBUF       |                5 |             13 |         2.60 |
+|  clk_IBUF_BUFG | inference/layer1_out[63]_i_1_n_0                                                       | reset_IBUF       |                3 |             17 |         5.67 |
+|  clk_IBUF_BUFG | inference/addr2[6]_i_1_n_0                                                             | reset_IBUF       |               17 |             29 |         1.71 |
+|  clk_IBUF_BUFG |                                                                                        | reset_IBUF       |               14 |             29 |         2.07 |
+|  clk_IBUF_BUFG | inference/layer1_out[47]_i_1_n_0                                                       | reset_IBUF       |                8 |             46 |         5.75 |
+|  clk_IBUF_BUFG | inference/layer1_out[127]_i_1_n_0                                                      | reset_IBUF       |               10 |             63 |         6.30 |
+|  clk_IBUF_BUFG | inference/p_45_out[0]                                                                  | reset_IBUF       |               64 |             64 |         1.00 |
+|  clk_IBUF_BUFG | inference/output_scores[9][9]_i_1_n_0                                                  | reset_IBUF       |               29 |             90 |         3.10 |
+|  clk_IBUF_BUFG | inference/addr1[9]_i_1_n_0                                                             | reset_IBUF       |              155 |            206 |         1.33 |
+|  clk_IBUF_BUFG | inference/z[21][10]_i_1_n_0                                                            | reset_IBUF       |              306 |            640 |         2.09 |
+|  clk_IBUF_BUFG |                                                                                        |                  |             3336 |          11377 |         3.41 |
++----------------+----------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+
+

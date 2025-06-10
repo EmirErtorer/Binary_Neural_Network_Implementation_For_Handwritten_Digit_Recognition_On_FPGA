@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.sim/sim_1/impl/timing/xsim/bnn_top_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bnn_inference
+INFO: [VRFC 10-311] analyzing module bnn_top
+INFO: [VRFC 10-311] analyzing module dense_kernel_rom
+INFO: [VRFC 10-311] analyzing module seven_segment_decoder
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/bnn_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bnn_top_tb

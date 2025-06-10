@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="bnn_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="bnn_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="17,741.835 ns"></ZoomStartTime>
+      <ZoomEndTime time="18,269.539 ns"></ZoomEndTime>
+      <Cursor1Time time="17,835.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="156"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject fp_name="/bnn_top_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/segment" type="array">
+      <obj_property name="ElementShortName">segment[6:0]</obj_property>
+      <obj_property name="ObjectShortName">segment[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/digit" type="array">
+      <obj_property name="ElementShortName">digit[3:0]</obj_property>
+      <obj_property name="ObjectShortName">digit[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/layer1_out" type="array">
+      <obj_property name="ElementShortName">layer1_out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">layer1_out[127:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/layer2_out" type="array">
+      <obj_property name="ElementShortName">layer2_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">layer2_out[63:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/output_scores" type="array">
+      <obj_property name="ElementShortName">output_scores[9:0][9:0]</obj_property>
+      <obj_property name="ObjectShortName">output_scores[9:0][9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/temp_max" type="array">
+      <obj_property name="ElementShortName">temp_max[9:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_max[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/temp_index" type="array">
+      <obj_property name="ElementShortName">temp_index[3:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_index[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/compare_idx" type="array">
+      <obj_property name="ElementShortName">compare_idx[3:0]</obj_property>
+      <obj_property name="ObjectShortName">compare_idx[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/z_ready" type="logic">
+      <obj_property name="ElementShortName">z_ready</obj_property>
+      <obj_property name="ObjectShortName">z_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/done_layer1" type="logic">
+      <obj_property name="ElementShortName">done_layer1</obj_property>
+      <obj_property name="ObjectShortName">done_layer1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/done_layer2" type="logic">
+      <obj_property name="ElementShortName">done_layer2</obj_property>
+      <obj_property name="ObjectShortName">done_layer2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/done_output" type="logic">
+      <obj_property name="ElementShortName">done_output</obj_property>
+      <obj_property name="ObjectShortName">done_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/done_argmax" type="logic">
+      <obj_property name="ElementShortName">done_argmax</obj_property>
+      <obj_property name="ObjectShortName">done_argmax</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/neuron_idx1" type="array">
+      <obj_property name="ElementShortName">neuron_idx1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_idx1[6:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/neuron_idx2" type="array">
+      <obj_property name="ElementShortName">neuron_idx2[5:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_idx2[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/neuron_idx3" type="array">
+      <obj_property name="ElementShortName">neuron_idx3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">neuron_idx3[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/addr1" type="array">
+      <obj_property name="ElementShortName">addr1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr1[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/addr2" type="array">
+      <obj_property name="ElementShortName">addr2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">addr2[6:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/addr3" type="array">
+      <obj_property name="ElementShortName">addr3[5:0]</obj_property>
+      <obj_property name="ObjectShortName">addr3[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/popcount" type="array">
+      <obj_property name="ElementShortName">popcount[0:63][10:0]</obj_property>
+      <obj_property name="ObjectShortName">popcount[0:63][10:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/z" type="array">
+      <obj_property name="ElementShortName">z[0:63][10:0]</obj_property>
+      <obj_property name="ObjectShortName">z[0:63][10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/dense_w0" type="array">
+      <obj_property name="ElementShortName">dense_w0[0:63][783:0]</obj_property>
+      <obj_property name="ObjectShortName">dense_w0[0:63][783:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/thresh_w0" type="array">
+      <obj_property name="ElementShortName">thresh_w0[0:63][10:0]</obj_property>
+      <obj_property name="ObjectShortName">thresh_w0[0:63][10:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/dense_w1" type="array">
+      <obj_property name="ElementShortName">dense_w1[0:63][127:0]</obj_property>
+      <obj_property name="ObjectShortName">dense_w1[0:63][127:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/thresh_w1" type="array">
+      <obj_property name="ElementShortName">thresh_w1[0:63][10:0]</obj_property>
+      <obj_property name="ObjectShortName">thresh_w1[0:63][10:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bnn_top_tb/uut/inference/dense_w2" type="array">
+      <obj_property name="ElementShortName">dense_w2[0:63][63:0]</obj_property>
+      <obj_property name="ObjectShortName">dense_w2[0:63][63:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>

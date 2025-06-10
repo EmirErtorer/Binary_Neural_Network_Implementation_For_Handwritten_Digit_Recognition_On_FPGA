@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v" \
+"../../../../bnn_inference_on_fpga.srcs/sources_1/new/bnn_top.v" \
+"../../../../bnn_inference_on_fpga.srcs/sources_1/new/image_rom.v" \
+"../../../../bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v" \
+"../../../../bnn_inference_on_fpga.srcs/sources_1/new/seven_segment_decoder.v" \
+"../../../../bnn_inference_on_fpga.srcs/sim_1/new/bnn_top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

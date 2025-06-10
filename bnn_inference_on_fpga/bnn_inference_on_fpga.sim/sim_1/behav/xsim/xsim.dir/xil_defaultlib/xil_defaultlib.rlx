@@ -1,0 +1,18 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/bnn_top_tb.v,1748353208,verilog,,,,bnn_top_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/dense_1_kernel_rom_tb.v,1743967719,verilog,,,,dense_1_kernel_rom_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/dense_1_kernel_thresholds_rom_tb.v,1743714019,verilog,,,,dense_1_kernel_thresholds_rom_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/dense_2_kernel_rom_tb.v,1743967731,verilog,,,,dense_2_kernel_rom_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/dense_2_kernel_thresholds_rom_tb.v,1743967558,verilog,,,,dense_2_kernel_thresholds_rom_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/dense_kernel_rom_tb.v,1743081160,verilog,,,,dense_kernel_rom_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/dense_kernel_thresholds_rom_tb.v,1743713916,verilog,,,,dense_kernel_thresholds_rom_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/image_rom_tb.v,1743772002,verilog,,,,image_rom_tb,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v,1749551722,verilog,,//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_top.v,,bnn_inference,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_top.v,1748353203,verilog,,//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/image_rom.v,,bnn_top,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/image_rom.v,1748447314,verilog,,//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v,,image_rom,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v,1748106200,verilog,,//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/seven_segment_decoder.v,,dense_1_kernel_rom_dualport;dense_1_kernel_thresholds_rom_lut;dense_2_kernel_rom_dualport;dense_kernel_rom_dualport;dense_kernel_thresholds_rom_lut,,,,,,,,
+//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/seven_segment_decoder.v,1746738458,verilog,,//psf/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sim_1/new/bnn_top_tb.v,,seven_segment_decoder,,,,,,,,

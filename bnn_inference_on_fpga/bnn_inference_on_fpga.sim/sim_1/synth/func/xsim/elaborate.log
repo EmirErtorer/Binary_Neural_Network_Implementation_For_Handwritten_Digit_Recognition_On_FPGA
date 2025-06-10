@@ -1,0 +1,88 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot bnn_top_tb_func_synth xil_defaultlib.bnn_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT4
+Compiling module xil_defaultlib.seven_segment_decoder
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module xil_defaultlib.dense_kernel_rom_dualport
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_0
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_1
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_2
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_3
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_4
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_5
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_6
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_7
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b100111100...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011111111...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011101001...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010010110...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b110010110...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010000100...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b100000100...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b111111010...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011011111...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011111111...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011111100...
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_8
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_9
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_10
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_11
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_12
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_13
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_14
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_15
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_16
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_17
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_18
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_19
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_20
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_21
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_22
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_23
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_24
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_25
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_26
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_27
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_28
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_29
+Compiling module xil_defaultlib.dense_kernel_rom_dualport_30
+Compiling module xil_defaultlib.bnn_inference
+Compiling module xil_defaultlib.bnn_top
+Compiling module xil_defaultlib.bnn_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot bnn_top_tb_func_synth

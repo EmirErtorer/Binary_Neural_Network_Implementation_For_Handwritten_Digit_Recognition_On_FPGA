@@ -1,0 +1,635 @@
+
+*** Running vivado
+    with args -log bnn_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bnn_top.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Jun 10 13:57:17 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bnn_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 515.145 ; gain = 201.543
+Command: read_checkpoint -auto_incremental -incremental C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/utils_1/imports/synth_1/bnn_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/utils_1/imports/synth_1/bnn_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+read_checkpoint: Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 519.465 ; gain = 4.320
+Command: synth_design -top bnn_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3284
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1387.941 ; gain = 446.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bnn_top' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'image_rom' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/image_rom.v:24]
+INFO: [Synth 8-3876] $readmem data file 'd1_img_11.mem' is read successfully [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/image_rom.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'image_rom' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/image_rom.v:24]
+INFO: [Synth 8-6157] synthesizing module 'bnn_inference' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:26]
+INFO: [Synth 8-3876] $readmem data file 'dense_kernel_transposed.mem' is read successfully [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'dense_kernel_rom_dualport' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:26]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+INFO: [Synth 8-6157] synthesizing module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:36]
+INFO: [Synth 8-3876] $readmem data file 'dense_kernel_thresholds.mem' is read successfully [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'dense_kernel_thresholds_rom_lut' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_a' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:47]
+WARNING: [Synth 8-689] width (32) of port connection 'addr_b' does not match port width (7) of module 'dense_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:48]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'dense_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:58]
+INFO: [Common 17-14] Message 'Synth 8-689' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6157] synthesizing module 'dense_1_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:48]
+INFO: [Synth 8-3876] $readmem data file 'dense_1_kernel_transposed.mem' is read successfully [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'dense_1_kernel_rom_dualport' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:48]
+INFO: [Synth 8-6157] synthesizing module 'dense_1_kernel_thresholds_rom_lut' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:58]
+INFO: [Synth 8-3876] $readmem data file 'dense_1_kernel_thresholds.mem' is read successfully [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'dense_1_kernel_thresholds_rom_lut' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:58]
+INFO: [Synth 8-6157] synthesizing module 'dense_2_kernel_rom_dualport' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:70]
+INFO: [Synth 8-3876] $readmem data file 'dense_2_kernel_transposed.mem' is read successfully [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'dense_2_kernel_rom_dualport' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/model_rom.v:70]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'bnn_inference' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_inference.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment_decoder' [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/seven_segment_decoder.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment_decoder' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/seven_segment_decoder.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'bnn_top' (0#1) [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/bnn_top.v:23]
+WARNING: [Synth 8-3848] Net image_data in module/entity image_rom does not have driver. [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/sources_1/new/image_rom.v:24]
+WARNING: [Synth 8-7129] Port image_data[783] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[782] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[781] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[780] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[779] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[778] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[777] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[776] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[775] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[774] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[773] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[772] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[771] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[770] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[769] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[768] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[767] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[766] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[765] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[764] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[763] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[762] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[761] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[760] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[759] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[758] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[757] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[756] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[755] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[754] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[753] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[752] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[751] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[750] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[749] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[748] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[747] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[746] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[745] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[744] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[743] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[742] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[741] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[740] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[739] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[738] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[737] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[736] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[735] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[734] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[733] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[732] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[731] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[730] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[729] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[728] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[727] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[726] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[725] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[724] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[723] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[722] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[721] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[720] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[719] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[718] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[717] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[716] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[715] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[714] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[713] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[712] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[711] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[710] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[709] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[708] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[707] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[706] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[705] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[704] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[703] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[702] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[701] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[700] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[699] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[698] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[697] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[696] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[695] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[694] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[693] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[692] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[691] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[690] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[689] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[688] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[687] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[686] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[685] in module image_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_data[684] in module image_rom is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1668.758 ; gain = 727.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1668.758 ; gain = 727.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1668.758 ; gain = 727.633
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.975 . Memory (MB): peak = 1668.758 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bnn_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bnn_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1861.457 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1862.426 ; gain = 921.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1862.426 ; gain = 921.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1862.426 ; gain = 921.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1862.426 ; gain = 921.301
+---------------------------------------------------------------------------------
+bnn_inference__GB6bnn_inference__GB5bnn_inference__GB4bnn_top__GC0bnn_inference__GB2bnn_inference__GB1bnn_inference__GB3bnn_inference__GB0bnn_inference__GB7bnn_inference__GB8---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1927.801 ; gain = 986.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1927.801 ; gain = 986.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 1927.801 ; gain = 986.676
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 215151
+   Resynthesis Design Size (number of cells) : 0
+   Resynth % : 0.0000,  Reuse % : 100.0000
+
+3. Reference Checkpoint Information
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.srcs/utils_1/imports/synth_1/bnn_top.dcp |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2024.1 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+---------------------------+------------+----------+
+|      |RTL Partition              |Replication |Instances |
++------+---------------------------+------------+----------+
+|1     |bnn_inference__GB0_#REUSE# |           1|         0|
+|2     |bnn_inference__GB1_#REUSE# |           1|         0|
+|3     |bnn_inference__GB2_#REUSE# |           1|         0|
+|4     |bnn_inference__GB3_#REUSE# |           1|         0|
+|5     |bnn_inference__GB4_#REUSE# |           1|         0|
+|6     |bnn_inference__GB5_#REUSE# |           1|         0|
+|7     |bnn_inference__GB6_#REUSE# |           1|         0|
+|8     |bnn_inference__GB7_#REUSE# |           1|         0|
+|9     |bnn_inference__GB8_#REUSE# |           1|         0|
+|10    |bnn_top__GC0_#REUSE#       |           1|         0|
++------+---------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 1927.801 ; gain = 986.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 4889.168 ; gain = 3948.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:58 . Memory (MB): peak = 5091.035 ; gain = 4149.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:02:09 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:42 ; elapsed = 00:02:09 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:01:43 ; elapsed = 00:02:10 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_a_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[40].dense_layer1_weights/data_b_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_a_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[38].dense_layer1_weights/data_b_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inference/layer1_parallel_block[36].dense_layer1_weights/data_a_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:54 ; elapsed = 00:02:23 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:54 ; elapsed = 00:02:23 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:55 ; elapsed = 00:02:24 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:56 ; elapsed = 00:02:24 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:57 ; elapsed = 00:02:25 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:57 ; elapsed = 00:02:26 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   256|
+|3     |LUT1     |   326|
+|4     |LUT2     |  2505|
+|5     |LUT3     |  3673|
+|6     |LUT4     |  3230|
+|7     |LUT5     |  2843|
+|8     |LUT6     |  5703|
+|9     |MUXF7    |  6705|
+|10    |MUXF8    |  2860|
+|11    |RAMB36E1 |   132|
+|12    |FDCE     |  1698|
+|13    |FDRE     | 11377|
+|14    |IBUF     |     2|
+|15    |OBUF     |    12|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:26 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 5091.176 ; gain = 3956.383
+Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:28 . Memory (MB): peak = 5091.176 ; gain = 4150.051
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.383 . Memory (MB): peak = 5091.176 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 9953 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 5091.176 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 931d89c0
+INFO: [Common 17-83] Releasing license: Synthesis
+146 Infos, 205 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:16 ; elapsed = 00:02:52 . Memory (MB): peak = 5091.176 ; gain = 4571.711
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.218 . Memory (MB): peak = 5091.176 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Mac/Home/Documents/Projects/FPGA-BNN-Project/bnn_inference_on_fpga/bnn_inference_on_fpga.runs/synth_1/bnn_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 5091.176 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bnn_top_utilization_synth.rpt -pb bnn_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 10 14:01:13 2025...
