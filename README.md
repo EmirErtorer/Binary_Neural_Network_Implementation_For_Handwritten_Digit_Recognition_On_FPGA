@@ -12,8 +12,8 @@ This project implements a Binary Neural Network (BNN) trained on the MNIST datas
 ├── trained_models/             # Contains trained .h5 models (BNN and CNN)
 ├── model_weights/              # Generated .mem files for ROMs
 ├── data/                       # MNIST test images (binarized .mem format)
-├── docs/                       # Thesis report, diagrams, supplementary materials
-├── diagrams/                   # All architectural and flow diagrams
+├── docs/                       # Thesis report
+├── diagrams/                   # All architectural and diagrams
 ├── bnn_inference_on_fpga/      # Vivado project folder
 ```
 
@@ -21,7 +21,7 @@ This project implements a Binary Neural Network (BNN) trained on the MNIST datas
 
 ## 2. Environment Setup (Python + Larq + TensorFlow)
 
-This project requires **Python 3.10**, **TensorFlow 2.15.0**, and **Larq 0.13.3**, which are the latest compatible versions. Larq does not support newer versions of TensorFlow.
+This project requires **Python 3.10**, **TensorFlow 2.15.0** and **Larq 0.13.3**, which are the latest compatible versions. Larq currently does not support newer versions of TensorFlow.
 
 ### macOS / Linux / Windows Setup
 
@@ -49,7 +49,7 @@ python -c "import tensorflow as tf; import larq as lq; print(tf.__version__, lq.
 
 ---
 
-## 3. Training and Benchmarking Pipeline
+## 3. Training and Benchmarking
 
 All scripts are located in the `python_code/` directory.
 
@@ -79,7 +79,7 @@ python cnn_train.py
 python bnn_inference_time.py
 ```
 
-- Benchmarks inference speed for batch size = 100 using TensorFlow graph mode.
+- Benchmarks inference speed for batch size = 100 using TensorFlow graph mode for BNN.
 
 4. **Benchmark CNN Inference Time (CPU):**
 
@@ -87,7 +87,7 @@ python bnn_inference_time.py
 python cnn_inference_time.py
 ```
 
-- Benchmarks traditional CNN latency for comparison.
+- Benchmarks inference speed for batch size = 100 using TensorFlow graph mode for BNN.
 
 ---
 
@@ -101,9 +101,11 @@ python extract_learned_parameters.py
 
 - Generates `.mem` files:
   - `dense_kernel_transposed.mem`
-  - `dense_1_kernel.mem`
-  - `dense_2_kernel.mem`
-  - Threshold files for first two layers
+  - `dense_1_kernel_transposed.mem`
+  - `dense_2_kernel_transposed.mem`
+  - `dense_kernel_thresholds.mem`
+  - `dense_1_kernel_thresholds.mem`
+  - `dense_2_kernel_thresholds.mem`
 
 2. **Convert test images into binarized `.mem` format:**
 
@@ -134,9 +136,9 @@ This will automatically load:
 - Design sources
 - Simulation sources
 - Constraint files (`constraints.xdc`)
-- IP configuration
+  
 
-### Option B: Create Project from Scratch (if needed)
+### Option B: Create Project from Scratch 
 
 1. Open Vivado and create a new project.
 2. Add the following Verilog source files:
@@ -184,7 +186,7 @@ This will automatically load:
 
 - Target Board: **Digilent Nexys A7-100T**
 - Frequency: **80 MHz** (based on post-implementation timing)
-- Output: **4-digit 7-segment display** showing the predicted digit (0–9)
+- Output: **4-digit 7-segment display** showing the predicted digit
 
 Use Vivado Hardware Manager to flash the `.bit` file to your board.
 
@@ -192,6 +194,6 @@ Use Vivado Hardware Manager to flash the `.bit` file to your board.
 
 ## 8. Acknowledgments
 
-This project was developed as part of a graduation thesis at Yeditepe University, Department of Computer Engineering, under the supervision of **Prof. Dr. Cem Ünsalan**.
+This project was developed as part of my graduation thesis at Yeditepe University, Department of Computer Engineering, under the supervision of **Prof. Dr. Cem Ünsalan**.
 
 
