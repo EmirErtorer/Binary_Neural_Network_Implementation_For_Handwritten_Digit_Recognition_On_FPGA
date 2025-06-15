@@ -1,6 +1,6 @@
 # Binary Neural Network Implementation for Handwritten Digit Recognition on FPGA
 
-This project implements a Binary Neural Network (BNN) trained on the MNIST dataset and deploys it on a Xilinx Artix-7 FPGA for real-time handwritten digit recognition. The model uses binarized weights and activations to enable efficient inference using only XNOR and popcount operations. The entire inference operation is implemented in Verilog with all training and preprocessing performed in Python using TensorFlow and Larq.
+This project implements a Binary Neural Network (BNN) trained on the MNIST dataset and deploys it on a Nexys A7-100T FPGA for real-time handwritten digit recognition. The model uses binarized weights and activations to enable efficient inference using only XNOR and popcount operations. The entire inference operation is implemented in Verilog with all training and preprocessing performed in Python using TensorFlow and Larq.
 
 ---
 
