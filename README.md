@@ -176,7 +176,7 @@ This will automatically load:
    - Go to **Sources** panel in Vivado.
    - Right-click under **Simulation Sources** > **Add Sources** > **Add or Create Simulation Sources**.
    - Select all `.mem` files.
-   - Ensure file names in your Verilog modules match exactly with these files (such as: `$readmemh("dense_kernel_transposed.mem", ...)`).
+   - Ensure file names in your Verilog modules match exactly with these files (such as: `$readmemh("dense_kernel_transposed.mem")`).
 
 ### 6.2 Synthesis
 
