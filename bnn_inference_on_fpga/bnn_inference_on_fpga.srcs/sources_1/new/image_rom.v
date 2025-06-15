@@ -26,7 +26,7 @@ module image_rom(output reg [783:0] image_data);
     integer i;
 
     initial begin
-        $readmemb("d1_img_11.mem", rom_data);
+        $readmemb("d2_img_25.mem", rom_data);
 
         for (i = 0; i < 784; i = i + 1)
             image_data[i] = rom_data[i];

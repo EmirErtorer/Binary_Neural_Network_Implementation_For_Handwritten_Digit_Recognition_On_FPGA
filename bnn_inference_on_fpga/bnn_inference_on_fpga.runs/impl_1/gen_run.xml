@@ -18,10 +18,14 @@
   <File Type="BITSTR-MMI" Name="bnn_top.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="bnn_top_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="bnn_top.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="bnn_top_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="bnn_top.ltx"/>
+  <File Type="BOOT-PDI-FILE" Name="bnn_top_boot.pdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="NPI_FILE" Name="bnn_top.npi"/>
   <File Type="OPT-DRC" Name="bnn_top_drc_opted.rpt"/>
+  <File Type="RBD_FILE" Name="bnn_top.rbd"/>
   <File Type="OPT-HWDEF" Name="bnn_top.hwdef"/>
   <File Type="PLACE-IO" Name="bnn_top_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="bnn_top_utilization_placed.rpt"/>
@@ -55,17 +59,13 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="bnn_top_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="bnn_top_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="bnn_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="bnn_top_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="bnn_top_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="bnn_top_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="bnn_top.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="bnn_top_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="bnn_top_pld.pdi"/>
   <File Type="RCFI_FILE" Name="bnn_top.rcfi"/>
   <File Type="CFI_FILE" Name="bnn_top.cfi"/>
   <File Type="RNPI_FILE" Name="bnn_top.rnpi"/>
-  <File Type="NPI_FILE" Name="bnn_top.npi"/>
-  <File Type="RBD_FILE" Name="bnn_top.rbd"/>
   <File Type="ROUTE-RQS" Name="bnn_top_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="bnn_top_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>

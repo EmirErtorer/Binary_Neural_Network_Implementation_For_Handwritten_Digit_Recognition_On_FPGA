@@ -209,7 +209,7 @@ module bnn_inference(input clk, input reset, input wire [783:0] image, output wi
                             
                         if (addr1 < 784) begin              
                             // Performing XNOR 
-                            for (j = 0; j < PARALLEL_NEURONS; j = j + 1) begin
+                            for (j = 0; j < PARALLEL_NEURONS; j = j + 2) begin
                                 if (image[addr1] ~^ dense_w0[j][783 - addr1])
                                     popcount[j] <= popcount[j] + 1;
                             end
